@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Cart</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            width: 80px;
+            height: auto;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Your Cart</h1>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price (EGP)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <h2 id="totalPrice"></h2>
+
+    <script>
+        var tableBody = document.querySelector("#cartTable tbody");
+        var totalElement = document.getElementById("totalPrice");
+
+        var cartData = JSON.parse(localStorage.getItem("cartData"));
+
+        if (cartData && cartData.products && cartData.products.length > 0) {
+            cartData.products.forEach(function (prod) {
+                var row = document.createElement("tr");
+                row.innerHTML = `
+          <td><img src="${prod.img}" alt="${prod.name}"></td>
+          <td>${prod.name}</td>
+          <td>${prod.price}</td>
+        `;
+                tableBody.appendChild(row);
+            });
+
+            totalElement.textContent = "Total: " + cartData.Total + " EGP";
+        } else {
+            tableBody.innerHTML = `<tr><td colspan="3">Cart is empty.</td></tr>`;
+        }
+    </script>
+</body>
+
+</html>

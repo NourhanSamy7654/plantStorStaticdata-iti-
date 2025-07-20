@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <a href="#" id="logo"><i class="fa-brands fa-pagelines"></i> GreenPLant</a>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+
+    <nav>
+      <ul id="navLinks">
+        <li><a href="">Home</a></li>
+        <li><a href="#product">Plant</a></li>
+        <li><a href="cartp.html" target="_self">Card</a></li>
+        <li><a href="">Sign In</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+  <section class="home-section">
+    <div class="home-content">
+      <h1>Welcome to Simple Store</h1>
+      <p>Discover our best plants and enjoy shopping!</p>
+    </div>
+  </section>
+  <section id="product">
+    <div class="SEC">
+      <h3> Our Products 🪴 </h3>
+    </div>
+
+    <div class="controls">
+
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <select id="priceFilter">
+        <option value="all">All prices</option>
+        <option value="120">Less than 120 EGP</option>
+      </select>
+      <button id="clearCart">Clear Cart</button>
+    </div>
+
+    <div id="cart"><a href="./cartp.html" target="_self">🛒Cart: 0 items</a> - Total: 0 EGP </div>
+
+    <div class="container" id="productContainer">
+      <div class="product-card">
+        <img src="IMAGES/61ObwF-fhXL._AC_UF1000_1000_QL80.jpg" alt="Product 1" />
+
+        <h3>Lucky Bamboo</h3>
+        <p>Price:LE 130.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/NURSERYPLASTICPOT_4bb86618-7a6c-4a84-a0eb-d62a08043097.png" alt="Product 2" />
+        <h3>ZZ Plant</h3>
+        <p>Price: LE 1,000.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/IMG_20230731_145014_470.jpg" alt="Product 3" />
+        <h3>Strelitzia nicolai</h3>
+        <p>Price:LE 550.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/WhatsAppImage2022-08-31at12.48.58PM.jpg" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES//WhatsAppImage2023-09-03at7.46.41AM.jpg" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/WhatsAppImage2025-03-12at2.38.49PM.jpg" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/shrubby-whitevein-300x300.png" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/WhatsAppImage2023-08-30at11.10.48AM.jpg" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/Screenshot_2024-11-08_at_10.24.29_AM.jpg" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="IMAGES/NURSERYPLASTICPOT_4bb86618-7a6c-4a84-a0eb-d62a08043097.png" alt="Product 4" />
+        <h3>Snake Plant Small</h3>
+        <p>Price:LE 120.00 EGP</p>
+        <button id="btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Simple Store. All rights reserved.(en:nourhan)</p>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
